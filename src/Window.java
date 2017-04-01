@@ -1,3 +1,5 @@
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
@@ -9,20 +11,21 @@ import java.util.Scanner;
 public class Window {
     public Window()
     {
-        JFrame frame = new JFrame("Yo");
+        JFrame frame = new JFrame("OOP GUI");
         PaintHandler painter = new PaintHandler();
+        Console console = new Console();
 
         frame.getContentPane().add(painter);
+        frame.getContentPane().add(new JScrollPane(console), "South");
+
         initializeMenuBar(frame);
-
-
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
 
 
-//===================================================================[Debug]========
+//===========================================[Debug]==============================
 
 
 
