@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="179.75" y="870.0">Window</node>
+    <node x="418.271954674221" y="101.93626062322946">GraphicsPanel</node>
+    <node x="-17.72804532577902" y="101.93626062322946">PaintImage</node>
+    <node x="-4.11543909348444" y="427.1416430594901">Pointer</node>
+    <node x="689.9943342776205" y="482.7372521246459">PaintLine</node>
+    <node x="422.50283286118975" y="729.4723796033994">PaintHandler</node>
+    <node x="-91.25" y="971.25">Main</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="PaintHandler" target="Pointer">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="PaintHandler" target="GraphicsPanel">
+      <point x="0.0" y="-70.0" />
+      <point x="0.0" y="103.5" />
+    </edge>
+    <edge source="Pointer" target="PaintImage">
+      <point x="0.0" y="-137.0" />
+      <point x="0.0" y="148.0" />
+    </edge>
+    <edge source="Window" target="PaintHandler">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="PaintLine" target="GraphicsPanel">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="PaintImage" target="GraphicsPanel">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="Main" target="Window">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="PaintHandler" target="PaintLine">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="Pointer" target="PaintHandler">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7494692144373672" x="447.0" y="562.0" />
+  <SelectedNodes>
+    <node>PaintHandler</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
