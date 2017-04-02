@@ -1,3 +1,5 @@
+package paint;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -7,18 +9,13 @@ import java.awt.image.WritableRaster;
 import java.io.File;
 import java.io.IOException;
 
-/**
- * Created by Jake on 15/03/2017.
- */
-public class PaintImage {
+public class PaintImage extends PaintObject {
     private BufferedImage img;
-    private GraphicsPanel panel;
     private int x, y,  rotation, width, height;
     private Color color;
 
-    public PaintImage(GraphicsPanel panel, String file, int x, int y, int width, int height) {
+    public PaintImage(String file, int x, int y, int width, int height) {
         img = null;
-        this.panel = panel;
         this.x = x;
         this.y = y;
 
@@ -29,6 +26,11 @@ public class PaintImage {
         resize(width, height);
 
     }
+
+    public void draw(Graphics g) {
+        g.drawImage(img, x, y, null);
+    }
+
 
     public void resize(int width, int height) {
         this.width = width;
@@ -42,10 +44,6 @@ public class PaintImage {
         tmpG2.dispose();
 
         img = tmpBuffer;
-    }
-
-    public void draw() {
-        panel.drawImage(img, x, y);
     }
 
     public void move(int x, int y) {

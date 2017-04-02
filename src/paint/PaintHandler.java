@@ -1,30 +1,36 @@
-import javax.swing.*;
+package paint;
+
 import java.util.LinkedList;
 
-/**
- * Created by Jake on 15/03/2017.
- */
 public class PaintHandler extends GraphicsPanel {
     public Pointer pointer = new Pointer(this);
     private LinkedList<PaintLine> lines = new LinkedList<>();
 
-    public void render() {
-        super.clear();
-        pointer.draw();
-
-        for(PaintLine line : lines) {
-            line.draw();
-        }
+    public PaintHandler() {
+        super();
+        render();
     }
 
-    public void clear() {
-        super.clear();
+    public void render() {
+        clear();
+        pointer.draw(image.getGraphics());
+        if(lines != null)
+            for(PaintLine line : lines)
+                line.draw(image.getGraphics());
+        repaint();
+    }
+
+    public void newPaint() {
+
+        clear();
         pointer = new Pointer(this);
         if(lines != null) lines.clear(); // clears lines list if not null
+        render();
+        repaint();
     }
 
     public void createLine(int x1, int y1, int x2, int y2) {
-        lines.add(new PaintLine(this, x1, y1, x2, y2));
+        lines.add(new PaintLine(x1, y1, x2, y2));
     }
 
 

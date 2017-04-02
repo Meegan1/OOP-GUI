@@ -1,8 +1,7 @@
+package paint;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
 /**
@@ -22,7 +21,7 @@ public class GraphicsPanel extends JPanel {
 	/**
 	 * The underlying image used for drawing. This is required so any previous drawing activity is persistent on the panel.
 	 */
-	private BufferedImage image;
+	protected BufferedImage image;
 
 		/**
 	 * Draw a line on the image using the given colour.
@@ -40,7 +39,6 @@ public class GraphicsPanel extends JPanel {
 		g.setColor(color);
 
 		g.drawLine(x1, y1, x2, y2);
-		this.repaint();
 	}
 	
 	/**
@@ -62,15 +60,6 @@ public class GraphicsPanel extends JPanel {
 		g.drawImage(image, 0, 0, null);
 	}
 
-	public void drawImage(BufferedImage img, int x, int y) { drawImage((Image) img, x, y); }
-	public void drawImage(Image img, int x, int y) {
-		Graphics g = image.getGraphics();
-
-		g.drawImage(img, x, y, null);
-		this.repaint();
-	}
-
-
 /*	public void resizePanel() {
 		Image tmp = Toolkit.getDefaultToolkit().createImage(image.getSource());
 
@@ -79,9 +68,6 @@ public class GraphicsPanel extends JPanel {
 		image.getGraphics().draw(tmp, 0, 0, null);
 		this.repaint();
 	}*/
-
-
-
 	/**
 	 * Constructor.
 	 */

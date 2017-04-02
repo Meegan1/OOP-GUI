@@ -1,3 +1,5 @@
+package paint;
+
 import static java.lang.Math.cos;
 import static java.lang.Math.sin;
 
@@ -7,10 +9,9 @@ public class Pointer extends PaintImage {
 
 	// Create pointer
 	public Pointer(PaintHandler panel){
-		super(panel, "arrow.png", 50, 50, 15, 15); // creates the pointer
+		super("arrow.png", 50, 50, 15, 15); // creates the pointer
 		this.panel = panel;
 		setRotation(180); // sets to face down
-		draw(); // draws to panel
 	}
 
 	// Moves the pointer this.x+x, this.y+y
