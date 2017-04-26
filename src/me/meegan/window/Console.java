@@ -1,4 +1,6 @@
-import paint.PaintHandler;
+package me.meegan.window;
+
+import me.meegan.paint.PaintHandler;
 
 import javax.swing.*;
 import javax.swing.text.AbstractDocument;

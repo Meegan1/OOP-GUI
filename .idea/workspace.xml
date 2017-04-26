@@ -7,28 +7,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c11c0fa7-fc54-4829-95d1-191ccb578134" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MenuBar.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/paint/PaintObject.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/GraphicsPanel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/PaintHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/PaintImage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/PaintLine.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Pointer.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Console$listener.class" afterPath="$PROJECT_DIR$/bin/Console$listener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Console.class" afterPath="$PROJECT_DIR$/bin/Console.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/test.uml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/google.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test.uml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Window.class" afterPath="$PROJECT_DIR$/bin/Window.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/test.uml" afterPath="$PROJECT_DIR$/bin/test.uml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/artifacts/OOP_GUI_jar/OOP GUI.jar" afterPath="$PROJECT_DIR$/classes/artifacts/OOP_GUI_jar/OOP GUI.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test.uml" afterPath="$PROJECT_DIR$/src/test.uml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/paint/Pointer.class" afterPath="$PROJECT_DIR$/bin/paint/Pointer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OOP GUI.iml" afterPath="$PROJECT_DIR$/OOP GUI.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Console.java" afterPath="$PROJECT_DIR$/src/Console.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Window.java" afterPath="$PROJECT_DIR$/src/Window.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/GraphicsPanel.java" afterPath="$PROJECT_DIR$/src/paint/GraphicsPanel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/PaintHandler.java" afterPath="$PROJECT_DIR$/src/paint/PaintHandler.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/PaintImage.java" afterPath="$PROJECT_DIR$/src/paint/PaintImage.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/PaintLine.java" afterPath="$PROJECT_DIR$/src/paint/PaintLine.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Pointer.java" afterPath="$PROJECT_DIR$/src/paint/Pointer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/paint/GraphicsPanel.java" afterPath="$PROJECT_DIR$/src/me/meegan/paint/GraphicsPanel.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/paint/PaintHandler.java" afterPath="$PROJECT_DIR$/src/me/meegan/paint/PaintHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/paint/PaintImage.java" afterPath="$PROJECT_DIR$/src/me/meegan/paint/PaintImage.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/paint/PaintLine.java" afterPath="$PROJECT_DIR$/src/me/meegan/paint/PaintLine.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/paint/PaintObject.java" afterPath="$PROJECT_DIR$/src/me/meegan/paint/PaintObject.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/paint/Pointer.java" afterPath="$PROJECT_DIR$/src/me/meegan/paint/Pointer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,93 +37,88 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Window.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Window.java">
+        <entry file="file://$PROJECT_DIR$/src/me/meegan/window/Window.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="9" column="45" lean-forward="false" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PaintHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paint/PaintHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+            <state relative-caret-position="68">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Console.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Console.java">
+        <entry file="file://$PROJECT_DIR$/src/me/meegan/window/Console.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="51" column="54" lean-forward="true" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="54" />
+            <state relative-caret-position="68">
+              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#Console#0;class#Console#0" expanded="false" />
+                <element signature="class#listener#0;class#Console#0" expanded="false" />
+                <element signature="class#ConsoleDocumentFilter#0;class#Console#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Pointer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paint/Pointer.java">
+        <entry file="file://$PROJECT_DIR$/src/me/meegan/paint/Pointer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PaintLine.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/paint/PaintLine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="306">
+              <caret line="23" column="53" lean-forward="false" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
+              <folding>
+                <element signature="method#Pointer#0;class#Pointer#0" expanded="false" />
+                <element signature="method#turnRight#0;class#Pointer#0" expanded="false" />
+                <element signature="method#turnLeft#0;class#Pointer#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="PaintImage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paint/PaintImage.java">
+        <entry file="file://$PROJECT_DIR$/src/me/meegan/paint/PaintImage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="102">
+              <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
               <folding>
-                <element signature="e#733#734#0" expanded="true" />
+                <element signature="method#resize#0;class#PaintImage#0" expanded="false" />
+                <element signature="method#setRotation#0;class#PaintImage#0" expanded="false" />
+                <element signature="method#setColor#0;class#PaintImage#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GraphicsPanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paint/GraphicsPanel.java">
+      <file leaf-file-name="MenuBar.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/me/meegan/window/MenuBar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="40" selection-end-column="35" />
-              <folding>
-                <element signature="docComment;class#GraphicsPanel#0" expanded="false" />
-                <element signature="docComment;field#BACKGROUND_COL#0;class#GraphicsPanel#0" expanded="false" />
-                <element signature="docComment;field#image#0;class#GraphicsPanel#0" expanded="false" />
-                <element signature="docComment;method#drawLine#0;class#GraphicsPanel#0" expanded="false" />
-                <element signature="docComment;method#clear#0;class#GraphicsPanel#0" expanded="false" />
-                <element signature="method#clear#0;class#GraphicsPanel#0" expanded="false" />
-                <element signature="method#paint#0;class#GraphicsPanel#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PaintObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paint/PaintObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+            <state relative-caret-position="68">
+              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PaintLine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/me/meegan/paint/PaintLine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PaintHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/me/meegan/paint/PaintHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <element signature="method#PaintHandler#0;class#PaintHandler#0" expanded="false" />
+                <element signature="method#newPaint#0;class#PaintHandler#0" expanded="false" />
+                <element signature="e#775#776#0" expanded="true" />
+                <element signature="e#831#832#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -190,11 +177,15 @@
         <option value="$PROJECT_DIR$/src/paint/PaintObject.java" />
         <option value="$PROJECT_DIR$/src/paint/PaintImage.java" />
         <option value="$PROJECT_DIR$/src/paint/GraphicsPanel.java" />
-        <option value="$PROJECT_DIR$/src/paint/PaintLine.java" />
-        <option value="$PROJECT_DIR$/src/paint/PaintHandler.java" />
-        <option value="$PROJECT_DIR$/src/paint/Pointer.java" />
         <option value="$PROJECT_DIR$/src/Window.java" />
         <option value="$PROJECT_DIR$/src/Console.java" />
+        <option value="$PROJECT_DIR$/src/paint/PaintHandler.java" />
+        <option value="$PROJECT_DIR$/src/paint/PaintLine.java" />
+        <option value="$PROJECT_DIR$/src/paint/Pointer.java" />
+        <option value="$PROJECT_DIR$/src/me/meegan/paint/Pointer.java" />
+        <option value="$PROJECT_DIR$/src/me/meegan/window/Console.java" />
+        <option value="$PROJECT_DIR$/src/me/meegan/window/MenuBar.java" />
+        <option value="$PROJECT_DIR$/src/me/meegan/window/Window.java" />
       </list>
     </option>
   </component>
@@ -205,10 +196,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="346" />
-    <option name="y" value="1" />
-    <option name="width" value="1583" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -266,14 +257,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="paint" />
+              <option name="myItemId" value="meegan" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -655,15 +646,50 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -716,23 +742,29 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory />
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui />
-      <extra-mocha-options />
-      <test-kind>DIRECTORY</test-kind>
-      <test-directory />
-      <recursive>false</recursive>
-      <method />
-    </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
       <method />
     </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
       <method />
     </configuration>
     <list size="1">
@@ -743,6 +775,11 @@
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -770,11 +807,24 @@
       <workItem from="1491082891223" duration="1882000" />
       <workItem from="1491084792274" duration="1722000" />
       <workItem from="1491090942836" duration="7780000" />
+      <workItem from="1491175696783" duration="1244000" />
+      <workItem from="1491833440804" duration="374000" />
+      <workItem from="1491834741213" duration="2100000" />
+      <workItem from="1492108943014" duration="872000" />
+      <workItem from="1492110292868" duration="749000" />
+      <workItem from="1492170665786" duration="15000" />
+      <workItem from="1492334451831" duration="606000" />
+      <workItem from="1492364989554" duration="222000" />
+      <workItem from="1492470726177" duration="599000" />
+      <workItem from="1492511079353" duration="587000" />
+      <workItem from="1492531633474" duration="2151000" />
+      <workItem from="1493144281340" duration="651000" />
+      <workItem from="1493213890037" duration="1506000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68745000" />
+    <option name="totallyTimeSpent" value="80421000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -786,14 +836,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="346" y="1" width="1583" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2010929" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24633822" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -801,19 +851,18 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3978142" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39718616" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896176" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896176" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1715847" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17099567" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IntelliGuard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896176" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15824032" sideWeight="0.4893617" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2835821" sideWeight="0.4893617" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18080889" sideWeight="0.5106383" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -822,6 +871,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896176" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -832,7 +882,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="15" />
+      <option name="time" value="29" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -841,7 +891,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintLine.java">
+    <entry file="file://$PROJECT_DIR$/src/me/meegan/paint/PaintLine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
@@ -849,7 +899,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/GraphicsPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/me/meegan/paint/GraphicsPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1207">
           <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
@@ -858,6 +908,7 @@
             <element signature="docComment;field#BACKGROUND_COL#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="docComment;field#image#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="docComment;method#drawLine#0;class#GraphicsPanel#0" expanded="false" />
+            <element signature="method#drawLine#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="docComment;method#clear#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="method#clear#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="method#paint#0;class#GraphicsPanel#0" expanded="false" />
@@ -865,12 +916,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintImage.java">
+    <entry file="file://$PROJECT_DIR$/src/me/meegan/paint/PaintImage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#733#734#0" expanded="true" />
+            <element signature="method#resize#0;class#PaintImage#0" expanded="false" />
+            <element signature="method#setRotation#0;class#PaintImage#0" expanded="false" />
+            <element signature="method#setColor#0;class#PaintImage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -879,19 +932,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/Pointer.java">
+    <entry file="file://$PROJECT_DIR$/src/me/meegan/paint/Pointer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="53" lean-forward="false" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
-          <folding />
+          <folding>
+            <element signature="method#Pointer#0;class#Pointer#0" expanded="false" />
+            <element signature="method#turnRight#0;class#Pointer#0" expanded="false" />
+            <element signature="method#turnLeft#0;class#Pointer#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/GraphicsPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/me/meegan/paint/GraphicsPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1309">
           <caret line="82" column="22" lean-forward="false" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
@@ -900,6 +956,7 @@
             <element signature="docComment;field#BACKGROUND_COL#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="docComment;field#image#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="docComment;method#drawLine#0;class#GraphicsPanel#0" expanded="false" />
+            <element signature="method#drawLine#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="docComment;method#clear#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="method#clear#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="method#paint#0;class#GraphicsPanel#0" expanded="false" />
@@ -911,19 +968,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/Pointer.java">
+    <entry file="file://$PROJECT_DIR$/src/me/meegan/paint/Pointer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="53" lean-forward="false" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
-          <folding />
+          <folding>
+            <element signature="method#Pointer#0;class#Pointer#0" expanded="false" />
+            <element signature="method#turnRight#0;class#Pointer#0" expanded="false" />
+            <element signature="method#turnLeft#0;class#Pointer#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/GraphicsPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/me/meegan/paint/GraphicsPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1309">
           <caret line="82" column="22" lean-forward="true" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
@@ -932,6 +992,7 @@
             <element signature="docComment;field#BACKGROUND_COL#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="docComment;field#image#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="docComment;method#drawLine#0;class#GraphicsPanel#0" expanded="false" />
+            <element signature="method#drawLine#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="docComment;method#clear#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="method#clear#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="method#paint#0;class#GraphicsPanel#0" expanded="false" />
@@ -943,19 +1004,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/Pointer.java">
+    <entry file="file://$PROJECT_DIR$/src/me/meegan/paint/Pointer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="method#Pointer#0;class#Pointer#0" expanded="false" />
+            <element signature="method#turnRight#0;class#Pointer#0" expanded="false" />
+            <element signature="method#turnLeft#0;class#Pointer#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/GraphicsPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/me/meegan/paint/GraphicsPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -964,6 +1028,7 @@
             <element signature="docComment;field#BACKGROUND_COL#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="docComment;field#image#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="docComment;method#drawLine#0;class#GraphicsPanel#0" expanded="false" />
+            <element signature="method#drawLine#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="docComment;method#clear#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="method#clear#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="method#paint#0;class#GraphicsPanel#0" expanded="false" />
@@ -975,19 +1040,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="29" column="57" lean-forward="false" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/Pointer.java">
+    <entry file="file://$PROJECT_DIR$/src/me/meegan/paint/Pointer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="method#Pointer#0;class#Pointer#0" expanded="false" />
+            <element signature="method#turnRight#0;class#Pointer#0" expanded="false" />
+            <element signature="method#turnLeft#0;class#Pointer#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/GraphicsPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/me/meegan/paint/GraphicsPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -996,6 +1064,7 @@
             <element signature="docComment;field#BACKGROUND_COL#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="docComment;field#image#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="docComment;method#drawLine#0;class#GraphicsPanel#0" expanded="false" />
+            <element signature="method#drawLine#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="docComment;method#clear#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="method#clear#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="method#paint#0;class#GraphicsPanel#0" expanded="false" />
@@ -1007,19 +1076,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/Pointer.java">
+    <entry file="file://$PROJECT_DIR$/src/me/meegan/paint/Pointer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="13" column="29" lean-forward="false" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-          <folding />
+          <folding>
+            <element signature="method#Pointer#0;class#Pointer#0" expanded="false" />
+            <element signature="method#turnRight#0;class#Pointer#0" expanded="false" />
+            <element signature="method#turnLeft#0;class#Pointer#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/GraphicsPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/me/meegan/paint/GraphicsPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1028,6 +1100,7 @@
             <element signature="docComment;field#BACKGROUND_COL#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="docComment;field#image#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="docComment;method#drawLine#0;class#GraphicsPanel#0" expanded="false" />
+            <element signature="method#drawLine#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="docComment;method#clear#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="method#clear#0;class#GraphicsPanel#0" expanded="false" />
             <element signature="method#paint#0;class#GraphicsPanel#0" expanded="false" />
@@ -1053,22 +1126,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/modules.uml">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>MODULES</ID>
-          <OriginalElement />
-          <nodes />
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="0.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/diagram.uml" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/modules.uml" />
     <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1099,36 +1157,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainTest.java">
+    <entry file="file://$PROJECT_DIR$/src/MainTest.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_51/src.zip!/java/awt/Component.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="598">
+          <caret line="205" column="32" lean-forward="true" selection-start-line="205" selection-start-column="32" selection-end-line="205" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/meegan/paint/GraphicsPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="34" column="17" lean-forward="true" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+          <folding>
+            <element signature="docComment;class#GraphicsPanel#0" expanded="false" />
+            <element signature="docComment;field#BACKGROUND_COL#0;class#GraphicsPanel#0" expanded="false" />
+            <element signature="docComment;field#image#0;class#GraphicsPanel#0" expanded="false" />
+            <element signature="docComment;method#drawLine#0;class#GraphicsPanel#0" expanded="false" />
+            <element signature="method#drawLine#0;class#GraphicsPanel#0" expanded="false" />
+            <element signature="docComment;method#clear#0;class#GraphicsPanel#0" expanded="false" />
+            <element signature="method#clear#0;class#GraphicsPanel#0" expanded="false" />
+            <element signature="method#paint#0;class#GraphicsPanel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test.uml" />
+    <entry file="file://$PROJECT_DIR$/src/me/meegan/paint/PaintHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="method#PaintHandler#0;class#PaintHandler#0" expanded="false" />
+            <element signature="method#newPaint#0;class#PaintHandler#0" expanded="false" />
+            <element signature="e#775#776#0" expanded="true" />
+            <element signature="e#831#832#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/meegan/paint/PaintLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.uml">
+    <entry file="file://$PROJECT_DIR$/src/Diagram.uml">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
           <ID>JAVA</ID>
           <OriginalElement />
           <nodes>
-            <node x="" y="">Window</node>
-            <node x="" y="">Console</node>
-            <node x="" y="">Main</node>
+            <node x="234.00000000000003" y="537.0">Window</node>
+            <node x="237.00000000000003" y="0.0">paint.Pointer</node>
+            <node x="172.00000000000003" y="324.0">paint.PaintHandler</node>
+            <node x="0.0" y="44.5">paint.PaintLine</node>
+            <node x="211.50000000000003" y="638.0">Main</node>
           </nodes>
           <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="106.0" y="887.5" />
-          <SelectedNodes />
+          <edges>
+            <edge source="paint.PaintHandler" target="paint.PaintLine">
+              <point x="-99.19999999999996" y="-81.5" />
+              <point x="196.80000000000007" y="304.0" />
+              <point x="54.25" y="304.0" />
+              <point x="-54.25" y="92.5" />
+            </edge>
+            <edge source="Window" target="paint.PaintHandler">
+              <point x="0.0" y="-25.5" />
+              <point x="0.0" y="81.5" />
+            </edge>
+            <edge source="paint.Pointer" target="paint.PaintHandler">
+              <point x="118.0" y="137.0" />
+              <point x="532.0" y="304.0" />
+              <point x="395.20000000000005" y="304.0" />
+              <point x="99.19999999999999" y="-81.5" />
+            </edge>
+            <edge source="paint.PaintHandler" target="paint.Pointer">
+              <point x="49.60000000000002" y="-81.5" />
+              <point x="345.6" y="294.0" />
+              <point x="414.0" y="294.0" />
+              <point x="0.0" y="137.0" />
+            </edge>
+            <edge source="Main" target="Window">
+              <point x="0.0" y="-25.5" />
+              <point x="0.0" y="25.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="59.0" y="144.0" />
+          <SelectedNodes>
+            <node>paint.PaintHandler</node>
+          </SelectedNodes>
           <Categories>
             <Category>Fields</Category>
             <Category>Inner Classes</Category>
@@ -1141,99 +1261,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_51/src.zip!/java/awt/Component.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="205" column="32" lean-forward="true" selection-start-line="205" selection-start-column="32" selection-end-line="205" selection-end-column="32" />
-          <folding>
-            <element signature="e#114015#114016#0" expanded="false" />
-            <element signature="e#114062#114063#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+        <state relative-caret-position="34">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MenuBar.java">
+    <entry file="file://$PROJECT_DIR$/src/me/meegan/paint/PaintObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="52" column="25" lean-forward="false" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/meegan/window/Console.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#Console#0;class#Console#0" expanded="false" />
+            <element signature="class#listener#0;class#Console#0" expanded="false" />
+            <element signature="class#ConsoleDocumentFilter#0;class#Console#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/GraphicsPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/me/meegan/window/Window.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="40" selection-end-column="35" />
-          <folding>
-            <element signature="docComment;class#GraphicsPanel#0" expanded="false" />
-            <element signature="docComment;field#BACKGROUND_COL#0;class#GraphicsPanel#0" expanded="false" />
-            <element signature="docComment;field#image#0;class#GraphicsPanel#0" expanded="false" />
-            <element signature="docComment;method#drawLine#0;class#GraphicsPanel#0" expanded="false" />
-            <element signature="docComment;method#clear#0;class#GraphicsPanel#0" expanded="false" />
-            <element signature="method#clear#0;class#GraphicsPanel#0" expanded="false" />
-            <element signature="method#paint#0;class#GraphicsPanel#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintImage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="e#733#734#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/me/meegan/paint/Pointer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="9" column="45" lean-forward="false" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/Pointer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Console.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="51" column="54" lean-forward="true" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="54" />
+          <caret line="23" column="53" lean-forward="false" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#Pointer#0;class#Pointer#0" expanded="false" />
+            <element signature="method#turnRight#0;class#Pointer#0" expanded="false" />
+            <element signature="method#turnLeft#0;class#Pointer#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paint/PaintLine.java">
+    <entry file="file://$PROJECT_DIR$/src/me/meegan/paint/PaintImage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        <state relative-caret-position="102">
+          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding>
+            <element signature="method#resize#0;class#PaintImage#0" expanded="false" />
+            <element signature="method#setRotation#0;class#PaintImage#0" expanded="false" />
+            <element signature="method#setColor#0;class#PaintImage#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/meegan/window/MenuBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>

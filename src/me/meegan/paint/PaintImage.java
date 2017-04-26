@@ -1,4 +1,4 @@
-package paint;
+package me.meegan.paint;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package paint;
+package me.meegan.paint;
 
 import static java.lang.Math.cos;
 import static java.lang.Math.sin;
