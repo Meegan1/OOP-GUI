@@ -63,8 +63,14 @@ public class Console extends JTextArea {
                 else if (input.equals("turnright")) {
                     painter.pointer.turnRight();
                 }
-                else if (input.equals("toggle")) {
-                    painter.pointer.toggleDown();
+                else if (input.equals("penup")) {
+                    painter.pointer.penUp();
+                }
+                else if (input.equals(("pendown"))) {
+                    painter.pointer.penDown();
+                }
+                else if (input.equals("undo")) {
+                    painter.undo();
                 }
                 else if (input.equals("clear")) {
                     painter.newPaint();
