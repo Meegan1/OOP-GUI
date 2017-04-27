@@ -7,18 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c11c0fa7-fc54-4829-95d1-191ccb578134" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/me/meegan/paint/GraphicsPanel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/me/meegan/paint/PaintHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/me/meegan/paint/PaintImage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/me/meegan/paint/PaintLine.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/me/meegan/paint/PaintObject.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/me/meegan/paint/Pointer.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/meegan/window/MenuBar.java" afterPath="$PROJECT_DIR$/src/me/meegan/window/MenuBar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/meegan/window/StatusBar.java" afterPath="$PROJECT_DIR$/src/me/meegan/window/StatusBar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/meegan/window/Window.java" afterPath="$PROJECT_DIR$/src/me/meegan/window/Window.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/meegan/window/console/Commands.java" afterPath="$PROJECT_DIR$/src/me/meegan/window/console/Commands.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/meegan/window/paint/PaintHandler.java" afterPath="$PROJECT_DIR$/src/me/meegan/window/paint/PaintHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/meegan/window/paint/Pointer.java" afterPath="$PROJECT_DIR$/src/me/meegan/window/paint/Pointer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/me/meegan/window/console/Console.java" afterPath="$PROJECT_DIR$/src/me/meegan/window/console/Console.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,6 +35,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Console.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/me/meegan/window/console/Console.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="75" column="47" lean-forward="false" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
+              <folding>
+                <element signature="e#738#739#0" expanded="true" />
+                <element signature="e#772#773#0" expanded="true" />
+                <element signature="class#ConsoleDocumentFilter#0;class#Console#0" expanded="false" />
+                <element signature="class#listener#0;class#Console#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="MenuBar.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/meegan/window/MenuBar.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -59,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Commands.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Commands.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/meegan/window/console/Commands.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="632">
-              <caret line="62" column="44" lean-forward="false" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
+            <state relative-caret-position="697">
+              <caret line="62" column="46" lean-forward="true" selection-start-line="62" selection-start-column="46" selection-end-line="62" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1216#1217#0" expanded="true" />
@@ -102,7 +106,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/GraphicsImage.java" />
         <option value="$PROJECT_DIR$/src/PanelImage.java" />
         <option value="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/src/test2.form" />
@@ -153,6 +156,7 @@
         <option value="$PROJECT_DIR$/src/me/meegan/window/paint/Pointer.java" />
         <option value="$PROJECT_DIR$/src/me/meegan/window/paint/PaintCircle.java" />
         <option value="$PROJECT_DIR$/src/me/meegan/window/paint/PaintHandler.java" />
+        <option value="$PROJECT_DIR$/src/me/meegan/window/console/Console.java" />
       </list>
     </option>
   </component>
@@ -848,12 +852,12 @@
       <workItem from="1493144281340" duration="651000" />
       <workItem from="1493213890037" duration="1506000" />
       <workItem from="1493215850405" duration="26157000" />
-      <workItem from="1493298987956" duration="10275000" />
+      <workItem from="1493298987956" duration="11212000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116853000" />
+    <option name="totallyTimeSpent" value="117790000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1194,6 +1198,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="496" column="0" lean-forward="false" selection-start-line="496" selection-start-column="0" selection-end-line="496" selection-end-column="0" />
+          <folding>
+            <element signature="e#20660#20661#0" expanded="false" />
+            <element signature="e#20697#20698#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1214,16 +1222,6 @@
             <element signature="method#move#0;class#PaintImage#0" expanded="false" />
             <element signature="method#setRotation#0;class#PaintImage#0" expanded="false" />
             <element signature="method#setColor#0;class#PaintImage#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/meegan/window/console/Console.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-          <folding>
-            <element signature="class#ConsoleDocumentFilter#0;class#Console#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1315,14 +1313,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/meegan/window/console/Commands.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="62" column="44" lean-forward="false" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
+        <state relative-caret-position="697">
+          <caret line="62" column="46" lean-forward="true" selection-start-line="62" selection-start-column="46" selection-end-line="62" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1216#1217#0" expanded="true" />
             <element signature="e#1263#1264#0" expanded="true" />
             <element signature="e#1302#1303#0" expanded="true" />
             <element signature="e#1355#1356#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/meegan/window/console/Console.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="75" column="47" lean-forward="false" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
+          <folding>
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="class#ConsoleDocumentFilter#0;class#Console#0" expanded="false" />
+            <element signature="class#listener#0;class#Console#0" expanded="false" />
           </folding>
         </state>
       </provider>

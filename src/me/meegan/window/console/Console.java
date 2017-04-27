@@ -25,6 +25,8 @@ public class Console extends JTextArea {
         append(msg + "\n");
     }
 
+    public void print(String msg) { append(msg); }
+
 
 
     public void addCommands(CommandInterface commands) {
@@ -34,6 +36,10 @@ public class Console extends JTextArea {
     public void executeCommand(String command, Object[] args) {
         if(commands == null) // if no command class has been added, return;.
             return;
+        if(command.toLowerCase().equals("help")) {
+            print(allCommands());
+            return;
+        }
 
         Method method = null;
         try {
@@ -66,10 +72,32 @@ public class Console extends JTextArea {
         }
     }
 
+    public String allCommands() {
+        String allCommandsString = "List of all commands: \n";
+        if(commands == null) {
+            println(allCommandsString);
+            return null;
+        }
+
+
+        try {
+            Class<?> c = commands.getClass(); // gets the class that's been set
+            Method[] declaredMethods = c.getDeclaredMethods(); // gets all declared methods within the class
+
+            for(Method m : declaredMethods) { // loops through all methods and adds usage to the string
+                allCommandsString += "\t" + m.getName() + " - " + getMethodUsage(m) + "\n";
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return allCommandsString;
+    }
+
     public static String getMethodUsage(Method m) {
-        String usage = "USAGE: " + m.getName();
+        String usage = "USAGE: " + m.getName().toLowerCase();
         for(Parameter p : m.getParameters()) {
-            usage = usage + " <" + p.getType().getSimpleName() + ">";
+            usage += " <" + p.getType().getSimpleName() + ">";
         }
         usage = usage + ".";
         return usage;
