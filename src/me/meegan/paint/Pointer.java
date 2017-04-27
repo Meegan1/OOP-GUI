@@ -1,5 +1,7 @@
 package me.meegan.paint;
 
+import java.awt.*;
+
 import static java.lang.Math.cos;
 import static java.lang.Math.sin;
 
@@ -12,6 +14,7 @@ public class Pointer extends PaintImage {
 		super("arrow.png", 50, 50, 15, 15); // creates the pointer
 		this.panel = panel;
 		setRotation(180); // sets to face down
+		super.setColor(Color.black); // set to black by default
 	}
 
 	// Moves the pointer this.x+x, this.y+y
@@ -21,7 +24,7 @@ public class Pointer extends PaintImage {
 		super.move(super.getX()+x, super.getY()+y);
 
 		if(isDown)
-			panel.createLine(px, py, getX(), getY());
+			panel.createLine(getColor(), px, py, getX(), getY());
 
 		panel.render();
 	}
@@ -49,6 +52,14 @@ public class Pointer extends PaintImage {
 
 	public void toggleDown() {
 		isDown = !isDown;
+	}
+
+	public void penUp() { isDown = false; }
+	public void penDown() { isDown = true; }
+
+	public void setColor(Color color) {
+		super.setColor(color);
+		panel.render();
 	}
 
 	public int getX() {

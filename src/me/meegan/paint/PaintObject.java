@@ -2,6 +2,6 @@ package me.meegan.paint;
 
 import java.awt.*;
 
-public abstract class PaintObject {
-    public abstract void draw(Graphics g);
+public interface PaintObject {
+    void draw(Graphics g);
 }

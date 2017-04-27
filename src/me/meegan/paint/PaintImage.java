@@ -9,7 +9,7 @@ import java.awt.image.WritableRaster;
 import java.io.File;
 import java.io.IOException;
 
-public class PaintImage extends PaintObject {
+public class PaintImage implements PaintObject {
     private BufferedImage img;
     private int x, y,  rotation, width, height;
     private Color color;
