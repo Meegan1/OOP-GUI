@@ -1,13 +1,13 @@
 package me.meegan.window;
 
 import javax.swing.*;
-import javax.swing.event.MenuEvent;
-import javax.swing.event.MenuListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
 public class MenuBar extends JMenuBar implements ActionListener {
+    final JFileChooser dialog = new JFileChooser();
+
     public JMenu file = new JMenu("File");
     public JMenu help = new JMenu("Help");
 
@@ -21,6 +21,7 @@ public class MenuBar extends JMenuBar implements ActionListener {
     public JMenuItem helpAbout = new JMenuItem("About", KeyEvent.VK_A);
 
     public MenuBar() {
+
         file.setMnemonic(KeyEvent.VK_F);
         help.setMnemonic(KeyEvent.VK_H);
 
@@ -42,6 +43,9 @@ public class MenuBar extends JMenuBar implements ActionListener {
         help.add(helpAbout);
 
         fileNew.addActionListener(this);
+        fileSave.addActionListener(this);
+        fileLoad.addActionListener(this);
+        fileExit.addActionListener(this);
     }
 
     /**
@@ -52,6 +56,22 @@ public class MenuBar extends JMenuBar implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getActionCommand() == "New")
-            new Window();
+            new Window(); // creates new window
+        else if(e.getActionCommand() == "Save") {
+            Window window = (Window) SwingUtilities.getWindowAncestor(this); // gets parent Window class reference
+            if(dialog.showDialog(window.painter, "Save") == JFileChooser.APPROVE_OPTION) { // shows Save dialog
+                window.painter.save(dialog.getSelectedFile()); // calls save method and passes the selected file
+            }
+        }
+        else if(e.getActionCommand() == "Load") {
+            Window window = (Window) SwingUtilities.getWindowAncestor(this); // gets parent Window class reference
+            if(dialog.showDialog(window.painter, "Load") == JFileChooser.APPROVE_OPTION) { // shows Load dialog
+                window.painter.load(dialog.getSelectedFile()); // calls load method and passes the selected file
+            }
+        }
+        else if(e.getActionCommand() == "Exit") {
+            SwingUtilities.getWindowAncestor(this).dispose(); // disposes of window
+        }
+
     }
 }

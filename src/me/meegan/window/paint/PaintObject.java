@@ -1,4 +1,4 @@
-package me.meegan.paint;
+package me.meegan.window.paint;
 
 import java.awt.*;
 

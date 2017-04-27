@@ -1,37 +1,36 @@
 package me.meegan.window;
 
-import me.meegan.console.Commands;
-import me.meegan.paint.PaintHandler;
-import me.meegan.console.Console;
+import me.meegan.window.console.Commands;
+import me.meegan.window.paint.PaintHandler;
+import me.meegan.window.console.Console;
 
 import javax.swing.*;
 import java.awt.event.*;
 
-public class Window {
-    public static int numberOfWindows = 0;
-    JFrame frame = new JFrame("OOP GUI");
-    PaintHandler painter = new PaintHandler();
-    Console console = new Console();
+public class Window extends JFrame {
+    private static int numberOfWindows = 0;
+    protected PaintHandler painter = new PaintHandler();
+    private Console console = new Console();
+    private MenuBar menuBar = new MenuBar();
 
     public Window()
     {
+        super("OOP GUI");
         numberOfWindows++;
 
-        frame.getContentPane().add(painter);
-        frame.getContentPane().add(new JScrollPane(console), "South");
+        getContentPane().add(painter);
+        getContentPane().add(new JScrollPane(console), "South");
 
-        MenuBar menuBar = new MenuBar();
-        frame.setJMenuBar(menuBar);
+        setJMenuBar(menuBar);
 
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
-
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        pack();
+        setVisible(true);
 
 
         console.addCommands(new Commands(painter));
 
-        frame.addWindowListener(new WindowListener()); // listens for the closing event
+        addWindowListener(new WindowListener()); // listens for the closing event
     }
 
 

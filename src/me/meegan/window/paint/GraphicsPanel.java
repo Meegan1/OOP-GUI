@@ -1,4 +1,4 @@
-package me.meegan.paint;
+package me.meegan.window.paint;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -21,7 +21,7 @@ public class GraphicsPanel extends JPanel {
 	/**
 	 * The underlying image used for drawing. This is required so any previous drawing activity is persistent on the panel.
 	 */
-	protected BufferedImage image;
+	protected transient BufferedImage image;
 
 		/**
 	 * Draw a line on the image using the given colour.
@@ -47,7 +47,7 @@ public class GraphicsPanel extends JPanel {
 	public void clear() {
 		
 		Graphics g = image.getGraphics();
-		
+
 		g.setColor(BACKGROUND_COL);
 		
 		g.fillRect(0, 0, image.getWidth(),  image.getHeight());

@@ -1,8 +1,9 @@
-package me.meegan.paint;
+package me.meegan.window.paint;
 
 import java.awt.*;
+import java.io.Serializable;
 
-public class PaintLine implements PaintObject {
+public class PaintLine implements PaintObject, Serializable {
     private int x1, y1, x2, y2;
     private Color color = Color.black;
 
@@ -13,6 +14,7 @@ public class PaintLine implements PaintObject {
         this.y1 = y1;
         this.y2 = y2;
     }
+    protected PaintLine() {} // Used for serialization
 
     public void draw(Graphics g)
     {

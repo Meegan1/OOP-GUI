@@ -1,6 +1,6 @@
-package me.meegan.console;
+package me.meegan.window.console;
 
-import me.meegan.paint.PaintHandler;
+import me.meegan.window.paint.PaintHandler;
 
 import java.awt.*;
 

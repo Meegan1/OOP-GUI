@@ -1,11 +1,12 @@
-package me.meegan.paint;
+package me.meegan.window.paint;
 
 import java.awt.*;
+import java.io.*;
 import java.lang.reflect.Field;
 import java.util.LinkedList;
 
-public class PaintHandler extends GraphicsPanel {
-    public Pointer pointer = new Pointer(this);
+public class PaintHandler extends GraphicsPanel implements Serializable {
+    public transient Pointer pointer = new Pointer(this);
     private LinkedList<PaintObject> history = new LinkedList<>();
     private LinkedList<PaintObject> redo = new LinkedList<>();
 
@@ -72,4 +73,30 @@ public class PaintHandler extends GraphicsPanel {
         return color;
     }
 
+    public void save(File file) {
+        try {
+            FileOutputStream fos = new FileOutputStream(file);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(this);
+            fos.close();
+            oos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void load(File file) {
+        try {
+            FileInputStream fis = new FileInputStream(file);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            PaintHandler obj = (PaintHandler) ois.readObject();
+            this.history = obj.history;
+            this.redo = obj.redo;
+            render();
+            fis.close();
+            ois.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

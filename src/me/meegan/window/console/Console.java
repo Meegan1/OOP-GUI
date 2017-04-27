@@ -1,4 +1,4 @@
-package me.meegan.console;
+package me.meegan.window.console;
 
 import javax.swing.*;
 import javax.swing.text.AbstractDocument;
@@ -7,7 +7,6 @@ import javax.swing.text.BadLocationException;
 import javax.swing.text.DocumentFilter;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 import java.util.ArrayList;
