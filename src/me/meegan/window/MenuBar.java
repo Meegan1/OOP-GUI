@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 
 public class MenuBar extends JMenuBar implements ActionListener {
     final JFileChooser dialog = new JFileChooser();
@@ -58,20 +59,44 @@ public class MenuBar extends JMenuBar implements ActionListener {
         if(e.getActionCommand() == "New")
             new Window(); // creates new window
         else if(e.getActionCommand() == "Save") {
-            Window window = (Window) SwingUtilities.getWindowAncestor(this); // gets parent Window class reference
-            if(dialog.showDialog(window.painter, "Save") == JFileChooser.APPROVE_OPTION) { // shows Save dialog
-                window.painter.save(dialog.getSelectedFile()); // calls save method and passes the selected file
-            }
+            save();
         }
         else if(e.getActionCommand() == "Load") {
-            Window window = (Window) SwingUtilities.getWindowAncestor(this); // gets parent Window class reference
-            if(dialog.showDialog(window.painter, "Load") == JFileChooser.APPROVE_OPTION) { // shows Load dialog
-                window.painter.load(dialog.getSelectedFile()); // calls load method and passes the selected file
-            }
+            load();
         }
         else if(e.getActionCommand() == "Exit") {
-            SwingUtilities.getWindowAncestor(this).dispose(); // disposes of window
+            exit();
         }
 
+    }
+
+    public void save() {
+        Window window = (Window) SwingUtilities.getWindowAncestor(this); // gets parent Window class reference
+        if(dialog.showDialog(window.painter, "Save") == JFileChooser.APPROVE_OPTION) { // shows Save dialog
+            try {
+                window.painter.save(dialog.getSelectedFile()); // calls save method and passes the selected file
+                window.statusBar.success(dialog.getSelectedFile().getAbsolutePath() + " has been saved.");
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+        }
+    }
+
+    public void load() {
+        Window window = (Window) SwingUtilities.getWindowAncestor(this); // gets parent Window class reference
+        if(dialog.showDialog(window.painter, "Load") == JFileChooser.APPROVE_OPTION) { // shows Load dialog
+            try {
+                window.painter.load(dialog.getSelectedFile()); // calls load method and passes the selected file
+                window.statusBar.success(dialog.getSelectedFile().getAbsolutePath() + " has been loaded.");
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void exit() {
+        SwingUtilities.getWindowAncestor(this).dispose(); // disposes of window
     }
 }

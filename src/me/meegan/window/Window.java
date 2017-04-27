@@ -5,6 +5,7 @@ import me.meegan.window.paint.PaintHandler;
 import me.meegan.window.console.Console;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 
 public class Window extends JFrame {
@@ -12,6 +13,9 @@ public class Window extends JFrame {
     protected PaintHandler painter = new PaintHandler();
     private Console console = new Console();
     private MenuBar menuBar = new MenuBar();
+    protected StatusBar statusBar = new StatusBar();
+
+    private JPanel bottomPanel = new JPanel();
 
     public Window()
     {
@@ -19,8 +23,11 @@ public class Window extends JFrame {
         numberOfWindows++;
 
         getContentPane().add(painter);
-        getContentPane().add(new JScrollPane(console), "South");
+        getContentPane().add(bottomPanel, "South");
 
+        bottomPanel.setLayout(new BorderLayout());
+        bottomPanel.add(new JScrollPane(console));
+        bottomPanel.add(statusBar, BorderLayout.SOUTH);
         setJMenuBar(menuBar);
 
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

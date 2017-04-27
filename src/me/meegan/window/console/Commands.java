@@ -54,4 +54,12 @@ public class Commands implements CommandInterface {
     public void reset() {
         painter.newPaint();
     }
+
+    public void circle(int r) {
+        painter.pointer.createCircle(r);
+    }
+
+    public void filledcircle(int r) {
+        painter.pointer.createCircle(r, true);
+    }
 }

@@ -70,4 +70,10 @@ public class Pointer extends PaintImage {
 		return super.getY()+(super.getHeight()/2);
 	}
 
+	public void createCircle(int r) { createCircle(r, false); } // don't fill by default
+	public void createCircle(int r, boolean fill) {
+		panel.createCircle(getColor(), getX(), getY(), r, fill);
+		panel.render();
+	}
+
 }

@@ -17,10 +17,11 @@ public class PaintHandler extends GraphicsPanel implements Serializable {
 
     public void render() {
         clear();
-        pointer.draw(image.getGraphics());
         if(history != null)
             for(PaintObject line : history)
                 line.draw(image.getGraphics());
+
+        pointer.draw(image.getGraphics()); // draws pointer last so it's always on top
         repaint();
     }
 
@@ -55,6 +56,10 @@ public class PaintHandler extends GraphicsPanel implements Serializable {
         history.add(new PaintLine(color, x1, y1, x2, y2));
     }
 
+    public void createCircle(Color color, int x, int y, int r, boolean fill) {
+        history.add(new PaintCircle(color, x, y, r, fill));
+    }
+
     public static Color getColorFromString(String string) {
         Field field = null;
         Color color = null;
@@ -73,30 +78,22 @@ public class PaintHandler extends GraphicsPanel implements Serializable {
         return color;
     }
 
-    public void save(File file) {
-        try {
-            FileOutputStream fos = new FileOutputStream(file);
-            ObjectOutputStream oos = new ObjectOutputStream(fos);
-            oos.writeObject(this);
-            fos.close();
-            oos.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public void save(File file) throws IOException {
+        FileOutputStream fos = new FileOutputStream(file);
+        ObjectOutputStream oos = new ObjectOutputStream(fos);
+        oos.writeObject(this);
+        fos.close();
+        oos.close();
     }
 
-    public void load(File file) {
-        try {
-            FileInputStream fis = new FileInputStream(file);
-            ObjectInputStream ois = new ObjectInputStream(fis);
-            PaintHandler obj = (PaintHandler) ois.readObject();
-            this.history = obj.history;
-            this.redo = obj.redo;
-            render();
-            fis.close();
-            ois.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void load(File file) throws IOException, ClassNotFoundException {
+        FileInputStream fis = new FileInputStream(file);
+        ObjectInputStream ois = new ObjectInputStream(fis);
+        PaintHandler obj = (PaintHandler) ois.readObject();
+        this.history = obj.history;
+        this.redo = obj.redo;
+        render();
+        fis.close();
+        ois.close();
     }
 }
