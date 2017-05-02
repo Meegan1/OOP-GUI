@@ -1,6 +1,10 @@
 package me.meegan.window.paint;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+import java.net.URISyntaxException;
 
 import static java.lang.Math.cos;
 import static java.lang.Math.sin;
@@ -11,9 +15,10 @@ public class Pointer extends PaintImage {
 
 	// Create pointer
 	public Pointer(PaintHandler panel){
-		super("arrow.png", 50, 50, 15, 15); // creates the pointer
+		super(Window.class.getResourceAsStream("/resources/arrow.png"), 50, 50, 15, 15); // creates the pointer
 		this.panel = panel;
-		setRotation(180); // sets to face down
+
+		rotate(180); // sets to face down
 		super.setColor(Color.black); // set to black by default
 	}
 
@@ -41,12 +46,12 @@ public class Pointer extends PaintImage {
 	}
 
 	public void turnRight() {
-		setRotation(90);
+		rotate(90);
 		panel.render();
 	}
 
 	public void turnLeft() {
-		setRotation(-90);
+		rotate(-90);
 		panel.render();
 	}
 

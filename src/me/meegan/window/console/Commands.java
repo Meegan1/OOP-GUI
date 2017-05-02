@@ -1,14 +1,19 @@
 package me.meegan.window.console;
 
+import me.meegan.window.StatusBar;
 import me.meegan.window.paint.PaintHandler;
 
 import java.awt.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class Commands implements CommandInterface {
     private PaintHandler painter;
-    public Commands(PaintHandler painter)
-    {
+    private StatusBar statusBar;
+    public Commands(PaintHandler painter, StatusBar statusBar) {
         this.painter = painter;
+        this.statusBar = statusBar;
     }
 
     public void forward(int distance) {
@@ -25,6 +30,18 @@ public class Commands implements CommandInterface {
             return "ERROR: color does not exist."; // print error
         painter.pointer.setColor(color);
         return null; // success
+    }
+
+    public void black() {
+        painter.pointer.setColor(Color.black);
+    }
+
+    public void green() {
+        painter.pointer.setColor(Color.green);
+    }
+
+    public void red() {
+        painter.pointer.setColor(Color.red);
     }
 
     public void turnLeft() {
@@ -61,5 +78,26 @@ public class Commands implements CommandInterface {
 
     public void filledcircle(int r) {
         painter.pointer.createCircle(r, true);
+    }
+
+    public void save(String filename) {
+        try {
+            painter.save(new File(filename));
+            statusBar.success(filename + " has been saved.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public String load(String filename) {
+        try {
+            painter.load(new File(filename));
+            statusBar.success(filename + " has been loaded.");
+        } catch (FileNotFoundException e) {
+            return "ERROR: " + filename + " does not exist.";
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

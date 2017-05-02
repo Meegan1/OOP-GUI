@@ -1,8 +1,9 @@
 package me.meegan.window.paint;
 
 import java.awt.*;
+import java.io.Serializable;
 
-public class PaintCircle implements PaintObject {
+public class PaintCircle implements PaintObject, Serializable {
     private boolean fill;
     private int x, y, r;
     private Color color;
@@ -14,6 +15,8 @@ public class PaintCircle implements PaintObject {
         this.r = r;
         this.fill = fill;
     }
+
+    protected PaintCircle() {} // Used for serialization
 
     @Override
     public void draw(Graphics g) {

@@ -9,8 +9,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 
 public class Console extends JTextArea {
     private CommandInterface commands;
@@ -60,12 +59,9 @@ public class Console extends JTextArea {
             // if no method exists
             println("ERROR: that command does not exist.");
         } catch(IllegalArgumentException e) {
-            if (args.length == 0) { // if only one argument, show usage message
-                println(getMethodUsage(method));
-                return;
-            }
+            if (args.length > 0) // if more than one argument, show error message
+                println("ERROR: " + e.getMessage() + "."); // prints the error message eg. ERROR: wrong number of arguments.
 
-            println("ERROR: " + e.getMessage() + "."); // prints the error message eg. ERROR: wrong number of arguments.
             println(getMethodUsage(method));
         } catch (Exception e) {
             e.printStackTrace();
@@ -82,10 +78,11 @@ public class Console extends JTextArea {
 
         try {
             Class<?> c = commands.getClass(); // gets the class that's been set
-            Method[] declaredMethods = c.getDeclaredMethods(); // gets all declared methods within the class
+            List<Method> declaredMethods = Arrays.asList(c.getDeclaredMethods());// gets all declared methods within the class
+            Collections.sort(declaredMethods, Comparator.comparing(Method::getName)); // sorts the methods into alphabetical order
 
             for(Method m : declaredMethods) { // loops through all methods and adds usage to the string
-                allCommandsString += "\t" + m.getName() + " - " + getMethodUsage(m) + "\n";
+                allCommandsString += "\t" + m.getName().toLowerCase() + " - " + getMethodUsage(m) + "\n";
             }
         } catch (Exception e) {
             e.printStackTrace();

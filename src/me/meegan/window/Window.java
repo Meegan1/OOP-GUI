@@ -35,7 +35,7 @@ public class Window extends JFrame {
         setVisible(true);
 
 
-        console.addCommands(new Commands(painter));
+        console.addCommands(new Commands(painter, statusBar));
 
         addWindowListener(new WindowListener()); // listens for the closing event
     }

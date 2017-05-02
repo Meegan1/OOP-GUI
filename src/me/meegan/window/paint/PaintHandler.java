@@ -31,7 +31,6 @@ public class PaintHandler extends GraphicsPanel implements Serializable {
         pointer = new Pointer(this);
         if(history != null) history.clear(); // clears lines list if not null
         render();
-        repaint();
     }
 
     public boolean undo() {

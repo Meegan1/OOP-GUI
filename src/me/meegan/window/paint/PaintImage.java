@@ -7,24 +7,37 @@ import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
 import java.awt.image.WritableRaster;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URISyntaxException;
 
 public class PaintImage implements PaintObject {
     private BufferedImage img;
     private int x, y,  rotation, width, height;
     private Color color;
 
-    public PaintImage(String file, int x, int y, int width, int height) {
+
+    public PaintImage(InputStream file, int x, int y, int width, int height) {
+        initialize(file, x, y, width, height);
+    }
+
+    public PaintImage(File file, int x, int y, int width, int height) {
+        initialize(file, x, y, width, height);
+    }
+
+    private void initialize(Object file, int x, int y, int width, int height) {
         img = null;
         this.x = x;
         this.y = y;
-
         try {
-            img = ImageIO.read(new File(file));
+            if(file instanceof InputStream)
+                img = ImageIO.read((InputStream) file);
+            else if(file instanceof File)
+                img = ImageIO.read((File) file);
         } catch (IOException e) {
         }
         resize(width, height);
-
     }
 
     public void draw(Graphics g) {
@@ -51,7 +64,7 @@ public class PaintImage implements PaintObject {
         this.y = y;
     }
 
-    public void setRotation(int rotation) {
+    public void rotate(int rotation) {
         this.rotation += (this.rotation+rotation >= 0 && this.rotation+rotation < 360) ? rotation : (this.rotation+rotation >= 0) ? rotation-360 : rotation+360; // sets rotation between 0-359
 
         AffineTransform tx = AffineTransform.getRotateInstance(Math.toRadians(rotation), img.getWidth(null) / 2, img.getHeight(null) / 2);
