@@ -3,6 +3,7 @@ package me.meegan.window.paint;
 import java.awt.*;
 import java.io.Serializable;
 
+@SuppressWarnings("unused")
 public class PaintCircle implements PaintObject, Serializable {
     private boolean fill;
     private int x, y, r;

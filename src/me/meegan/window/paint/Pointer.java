@@ -1,11 +1,6 @@
 package me.meegan.window.paint;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
-import java.io.File;
-import java.io.IOException;
-import java.net.URISyntaxException;
-
 import static java.lang.Math.cos;
 import static java.lang.Math.sin;
 
@@ -23,7 +18,7 @@ public class Pointer extends PaintImage {
 	}
 
 	// Moves the pointer this.x+x, this.y+y
-	public void move(int x, int y)
+	void move(int x, int y)
 	{
 		int px = getX(), py = getY();
 		super.move(super.getX()+x, super.getY()+y);
@@ -67,11 +62,11 @@ public class Pointer extends PaintImage {
 		panel.render();
 	}
 
-	public int getX() {
+	int getX() {
 		return super.getX()+(super.getWidth()/2);
 	}
 
-	public int getY() {
+	int getY() {
 		return super.getY()+(super.getHeight()/2);
 	}
 

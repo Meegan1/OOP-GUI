@@ -3,6 +3,7 @@ package me.meegan.window.paint;
 import java.awt.*;
 import java.io.Serializable;
 
+@SuppressWarnings("unused")
 public class PaintLine implements PaintObject, Serializable {
     private int x1, y1, x2, y2;
     private Color color = Color.black;

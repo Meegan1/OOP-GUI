@@ -10,12 +10,9 @@ import java.awt.event.*;
 
 public class Window extends JFrame {
     private static int numberOfWindows = 0;
-    protected PaintHandler painter = new PaintHandler();
-    private Console console = new Console();
+    PaintHandler painter = new PaintHandler();
     private MenuBar menuBar = new MenuBar();
-    protected StatusBar statusBar = new StatusBar();
-
-    private JPanel bottomPanel = new JPanel();
+    StatusBar statusBar = new StatusBar();
 
     public Window()
     {
@@ -23,14 +20,17 @@ public class Window extends JFrame {
         numberOfWindows++;
 
         getContentPane().add(painter);
-        getContentPane().add(bottomPanel, "South");
 
+        JPanel bottomPanel = new JPanel();
+        getContentPane().add(bottomPanel, "South");
         bottomPanel.setLayout(new BorderLayout());
+
+        Console console = new Console();
         bottomPanel.add(new JScrollPane(console));
         bottomPanel.add(statusBar, BorderLayout.SOUTH);
         setJMenuBar(menuBar);
 
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         pack();
         setVisible(true);
 
@@ -43,16 +43,18 @@ public class Window extends JFrame {
 
     class WindowListener extends WindowAdapter {
         /**
-         * Invoked when a window has been closed as the result
-         * of calling dispose on the window.
+         * Invoked when a window is closing.
          *
          * @param e
          */
         @Override
-        public void windowClosed(WindowEvent e) {
+        public void windowClosing(WindowEvent e) {
+            if (menuBar.hasChanged() && (!menuBar.hasChanged() || !menuBar.confirm())) return;
+
             numberOfWindows--;
-            if(numberOfWindows == 0)
+            if (numberOfWindows == 0)
                 System.exit(0); // if no windows, exit program.
+            dispose(); // disposes of window
         }
     }
 }

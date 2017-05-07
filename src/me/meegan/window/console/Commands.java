@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+@SuppressWarnings("unused")
 public class Commands implements CommandInterface {
     private PaintHandler painter;
     private StatusBar statusBar;
@@ -60,6 +61,10 @@ public class Commands implements CommandInterface {
         painter.pointer.penDown();
     }
 
+    public void toggle() {
+        painter.pointer.toggleDown();
+    }
+
     public void undo() {
         painter.undo();
     }
@@ -76,7 +81,7 @@ public class Commands implements CommandInterface {
         painter.pointer.createCircle(r);
     }
 
-    public void filledcircle(int r) {
+    public void filledCircle(int r) {
         painter.pointer.createCircle(r, true);
     }
 
@@ -96,8 +101,12 @@ public class Commands implements CommandInterface {
         } catch (FileNotFoundException e) {
             return "ERROR: " + filename + " does not exist.";
         }catch (Exception e) {
-            e.printStackTrace();
+            return "ERROR: there was an error whilst loading " + filename + ".";
         }
         return null;
+    }
+
+    public void print() {
+        painter.print();
     }
 }

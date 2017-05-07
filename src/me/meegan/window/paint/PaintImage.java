@@ -7,10 +7,8 @@ import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
 import java.awt.image.WritableRaster;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URISyntaxException;
 
 public class PaintImage implements PaintObject {
     private BufferedImage img;
@@ -35,7 +33,7 @@ public class PaintImage implements PaintObject {
                 img = ImageIO.read((InputStream) file);
             else if(file instanceof File)
                 img = ImageIO.read((File) file);
-        } catch (IOException e) {
+        } catch (IOException ignored) {
         }
         resize(width, height);
     }
@@ -45,7 +43,7 @@ public class PaintImage implements PaintObject {
     }
 
 
-    public void resize(int width, int height) {
+    private void resize(int width, int height) {
         this.width = width;
         this.height = height;
 
@@ -59,12 +57,13 @@ public class PaintImage implements PaintObject {
         img = tmpBuffer;
     }
 
-    public void move(int x, int y) {
+    @SuppressWarnings("unused")
+    void move(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    public void rotate(int rotation) {
+    void rotate(int rotation) {
         this.rotation += (this.rotation+rotation >= 0 && this.rotation+rotation < 360) ? rotation : (this.rotation+rotation >= 0) ? rotation-360 : rotation+360; // sets rotation between 0-359
 
         AffineTransform tx = AffineTransform.getRotateInstance(Math.toRadians(rotation), img.getWidth(null) / 2, img.getHeight(null) / 2);
@@ -72,7 +71,7 @@ public class PaintImage implements PaintObject {
         img = op.filter(img, null);
     }
 
-    public void setColor(Color color) {
+    void setColor(Color color) {
         WritableRaster raster = img.getRaster();
         for (int xx = 0; xx < getWidth()-1; xx++) {
             for (int yy = 0; yy < getHeight()-1; yy++) {
@@ -86,25 +85,25 @@ public class PaintImage implements PaintObject {
         this.color = color;
     }
 
-    public int getX() {
+    int getX() {
         return x;
     }
 
-    public int getY() {
+    int getY() {
         return y;
     }
 
-    public int getRotation() {
+    int getRotation() {
         return rotation;
     }
 
-    public int getWidth() {
+    int getWidth() {
         return width;
     }
 
-    public int getHeight() {
+    int getHeight() {
         return height;
     }
 
-    public Color getColor() { return color; }
+    Color getColor() { return color; }
 }

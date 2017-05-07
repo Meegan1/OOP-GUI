@@ -20,11 +20,11 @@ public class Console extends JTextArea {
         addKeyListener(new listener());
     }
 
-    public void println(String msg) {
+    private void println(String msg) {
         append(msg + "\n");
     }
 
-    public void print(String msg) { append(msg); }
+    private void print(String msg) { append(msg); }
 
 
 
@@ -32,7 +32,7 @@ public class Console extends JTextArea {
         this.commands = commands;
     }
 
-    public void executeCommand(String command, Object[] args) {
+    private void executeCommand(String command, Object[] args) {
         if(commands == null) // if no command class has been added, return;.
             return;
         if(command.toLowerCase().equals("help")) {
@@ -68,7 +68,7 @@ public class Console extends JTextArea {
         }
     }
 
-    public String allCommands() {
+    private String allCommands() {
         String allCommandsString = "List of all commands: \n";
         if(commands == null) {
             println(allCommandsString);
@@ -79,7 +79,7 @@ public class Console extends JTextArea {
         try {
             Class<?> c = commands.getClass(); // gets the class that's been set
             List<Method> declaredMethods = Arrays.asList(c.getDeclaredMethods());// gets all declared methods within the class
-            Collections.sort(declaredMethods, Comparator.comparing(Method::getName)); // sorts the methods into alphabetical order
+            declaredMethods.sort(Comparator.comparing(Method::getName)); // sorts the methods into alphabetical order
 
             for(Method m : declaredMethods) { // loops through all methods and adds usage to the string
                 allCommandsString += "\t" + m.getName().toLowerCase() + " - " + getMethodUsage(m) + "\n";
@@ -91,7 +91,7 @@ public class Console extends JTextArea {
         return allCommandsString;
     }
 
-    public static String getMethodUsage(Method m) {
+    private static String getMethodUsage(Method m) {
         String usage = "USAGE: " + m.getName().toLowerCase();
         for(Parameter p : m.getParameters()) {
             usage += " <" + p.getType().getSimpleName() + ">";
@@ -126,7 +126,7 @@ public class Console extends JTextArea {
     class listener extends KeyAdapter {
         public void keyPressed(KeyEvent e) {
             if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-                e.consume(); // prevents enter from occuring
+                e.consume(); // prevents enter from occurring
                 String input;
                 try {
                     input = getText().split("\n")[getLineCount() - 1]; // gets last line of input
@@ -138,10 +138,10 @@ public class Console extends JTextArea {
                 String[] inputSplit = input.trim().split(" "); // splits input into each argument + initial command
 
                 String command = inputSplit[0]; // gets command name
-                String[] commandargs = Arrays.copyOfRange(inputSplit, 1, inputSplit.length); // gets arguments
+                String[] commandArgs = Arrays.copyOfRange(inputSplit, 1, inputSplit.length); // gets arguments
 
                 ArrayList<Object> arguments = new ArrayList<>(); // creates temp list for looping
-                for(String arg : commandargs) // checks if int and stores in list as object type.
+                for(String arg : commandArgs) // checks if int and stores in list as object type.
                 {
                     try {
                         arguments.add(Integer.parseInt(arg));
