@@ -20,18 +20,38 @@ public class Console extends JTextArea {
         addKeyListener(new listener());
     }
 
+    /**
+     * Prints line to the console.
+     *
+     * @param msg - Message.
+     */
     private void println(String msg) {
         append(msg + "\n");
     }
 
+    /**
+     * Prints to the console.
+     *
+     * @param msg - Message.
+     */
     private void print(String msg) { append(msg); }
 
 
-
+    /**
+     * Sets the current command class as the one given.
+     *
+     * @param commands - CommandInterface class.
+     */
     public void addCommands(CommandInterface commands) {
         this.commands = commands;
     }
 
+    /**
+     * Attempts to execute a command from a CommandInterface class.
+     *
+     * @param command - Command.
+     * @param args - Command arguments.
+     */
     private void executeCommand(String command, Object[] args) {
         if(commands == null) // if no command class has been added, return;.
             return;
@@ -91,6 +111,12 @@ public class Console extends JTextArea {
         return allCommandsString;
     }
 
+    /**
+     * Creates a string with the usage of a given method.
+     *
+     * @param m - Method.
+     * @return The usage of the method.
+     */
     private static String getMethodUsage(Method m) {
         String usage = "USAGE: " + m.getName().toLowerCase();
         for(Parameter p : m.getParameters()) {
@@ -100,6 +126,9 @@ public class Console extends JTextArea {
         return usage;
     }
 
+    /**
+     * Document filter to prevent edits from anywhere apart from the last line (the command line).
+     */
     public class ConsoleDocumentFilter extends DocumentFilter {
         @Override
         public void insertString(FilterBypass fb, int offset, String string, AttributeSet attr) throws BadLocationException {
@@ -123,6 +152,10 @@ public class Console extends JTextArea {
         }
     }
 
+    /**
+     * Listener which extracts the users' input and splits it into [command] ..[args].
+     * This is sent to the executeCommand(command, args) method to call the commands.
+     */
     class listener extends KeyAdapter {
         public void keyPressed(KeyEvent e) {
             if (e.getKeyCode() == KeyEvent.VK_ENTER) {

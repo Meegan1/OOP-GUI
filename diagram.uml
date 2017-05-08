@@ -3,161 +3,216 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="460.0" y="2029.0">com</node>
-    <node x="1825.5833333333335" y="0.0">netscape</node>
-    <node x="753.0" y="2029.0">sun</node>
-    <node x="1047.5" y="167.5">me.meegan.window.paint.PaintCircle</node>
-    <node x="608.0" y="2029.0">java</node>
-    <node x="310.0" y="2029.0">javax</node>
-    <node x="156.0" y="2029.0">javafx</node>
-    <node x="462.25" y="1446.0">me.meegan.window.console</node>
-    <node x="343.33333333333337" y="1056.5">me.meegan.window.StatusBar</node>
-    <node x="0.0" y="2029.0">oracle</node>
-    <node x="896.0" y="2029.0">org</node>
-    <node x="0.0" y="601.5">me.meegan.window.paint.GraphicsPanel</node>
-    <node x="742.5833333333334" y="1435.0">me.meegan.window.Window.WindowListener</node>
-    <node x="1651.5833333333335" y="0.0">resources</node>
-    <node x="1472.5833333333335" y="0.0">META-INF</node>
-    <node x="1038.0" y="2029.0">jdk</node>
-    <node x="577.0833333333334" y="1699.0">me.meegan.window.Window</node>
-    <node x="924.0072150072151" y="0.0">me.meegan.window.paint.PaintObject</node>
-    <node x="328.0" y="491.0">me.meegan.window.paint.Pointer</node>
-    <node x="339.5" y="101.0">me.meegan.window.paint.PaintImage</node>
-    <node x="790.5" y="167.5">me.meegan.window.paint.PaintLine</node>
-    <node x="1016.5833333333334" y="1302.0">me.meegan.window.MenuBar</node>
-    <node x="647.5833333333334" y="1933.0">TurtleGraphics</node>
-    <node x="512.3333333333334" y="935.0">me.meegan.window.paint.PaintHandler</node>
+    <node x="304.0" y="2535.0">com</node>
+    <node x="2440.0" y="0.0">netscape</node>
+    <node x="834.9662733100236" y="1364.5">me.meegan.window.console.CommandInterface</node>
+    <node x="597.0" y="2535.0">sun</node>
+    <node x="732.3333333333334" y="277.0">me.meegan.window.paint.PaintCircle</node>
+    <node x="452.0" y="2535.0">java</node>
+    <node x="154.0" y="2535.0">javax</node>
+    <node x="1154.0" y="1654.0">me.meegan.window.console.Commands</node>
+    <node x="0.0" y="2535.0">javafx</node>
+    <node x="1668.6666666666665" y="1342.0">me.meegan.window.StatusBar</node>
+    <node x="2611.0" y="0.0">oracle</node>
+    <node x="740.0" y="2535.0">org</node>
+    <node x="567.8333333333334" y="831.5">me.meegan.window.paint.GraphicsPanel</node>
+    <node x="1784.0" y="1886.0">me.meegan.window.Window.WindowListener</node>
+    <node x="2266.0" y="0.0">resources</node>
+    <node x="605.9662733100236" y="1353.5">me.meegan.window.console.Console.listener</node>
+    <node x="2087.0" y="0.0">META-INF</node>
+    <node x="882.0" y="2535.0">jdk</node>
+    <node x="1008.5" y="2249.0">me.meegan.window.Window</node>
+    <node x="1479.0514277389282" y="0.0">me.meegan.window.paint.PaintObject</node>
+    <node x="990.0833333333334" y="710.0">me.meegan.window.paint.Pointer</node>
+    <node x="194.96627331002355" y="1331.5">me.meegan.window.console.Console.ConsoleDocumentFilter</node>
+    <node x="1020.3333333333334" y="101.0">me.meegan.window.paint.PaintImage</node>
+    <node x="1671.3333333333335" y="277.0">me.meegan.window.paint.PaintLine</node>
+    <node x="458.0000000000002" y="1808.0">me.meegan.window.console.Console</node>
+    <node x="0.0" y="1753.0">me.meegan.window.MenuBar</node>
+    <node x="1059.0" y="2439.0">TurtleGraphics</node>
+    <node x="1005.9662733100236" y="1154.0">me.meegan.window.paint.PaintHandler</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="me.meegan.window.console" target="me.meegan.window.paint.PaintHandler">
-      <point x="30.0" y="-14.5" />
-      <point x="552.25" y="1277.0" />
-      <point x="577.0" y="1277.0" />
-      <point x="-129.33333333333337" y="158.5" />
+    <edge source="me.meegan.window.console.Console" target="me.meegan.window.console.Console.ConsoleDocumentFilter">
+      <point x="-150.0" y="-103.5" />
+      <point x="495.5000000000002" y="1634.0" />
+      <point x="292.71627331002355" y="1634.0" />
+      <point x="-97.75" y="47.5" />
     </edge>
-    <edge source="me.meegan.window.paint.PaintHandler" target="me.meegan.window.paint.GraphicsPanel">
-      <point x="-166.28571428571433" y="-158.5" />
-      <point x="540.047619047619" y="915.0" />
-      <point x="154.0" y="915.0" />
-      <point x="0.0" y="81.5" />
+    <edge source="me.meegan.window.console.Commands" target="me.meegan.window.StatusBar">
+      <point x="199.33333333333326" y="-257.5" />
+      <point x="1652.3333333333333" y="1634.0" />
+      <point x="1693.5" y="1634.0" />
+      <point x="-49.66666666666674" y="37.0" />
     </edge>
-    <edge source="me.meegan.window.paint.PaintCircle" target="me.meegan.window.paint.PaintObject">
-      <point x="0.0" y="-103.5" />
-      <point x="1181.5" y="81.0" />
-      <point x="1033.382215007215" y="81.0" />
-      <point x="21.875" y="25.5" />
-    </edge>
-    <edge source="TurtleGraphics" target="me.meegan.window.Window">
-      <point x="0.0" y="-25.5" />
-      <point x="0.0" y="92.0" />
+    <edge source="me.meegan.window.Window" target="me.meegan.window.StatusBar">
+      <point x="73.63636363636374" y="-70.0" />
+      <point x="1217.1363636363637" y="2209.0" />
+      <point x="1773.5" y="2209.0" />
+      <point x="1773.5" y="1634.0" />
+      <point x="1792.8333333333335" y="1634.0" />
+      <point x="49.66666666666674" y="37.0" />
     </edge>
     <edge source="me.meegan.window.paint.Pointer" target="me.meegan.window.paint.PaintImage">
       <point x="0.0" y="-192.0" />
-      <point x="0.0" y="170.0" />
-    </edge>
-    <edge source="me.meegan.window.Window" target="me.meegan.window.StatusBar">
-      <point x="-140.90909090909088" y="-92.0" />
-      <point x="591.1742424242425" y="1679.0" />
-      <point x="377.08333333333337" y="1679.0" />
-      <point x="377.08333333333337" y="1277.0" />
-      <point x="368.1666666666667" y="1277.0" />
-      <point x="-49.666666666666686" y="37.0" />
-    </edge>
-    <edge source="me.meegan.window.Window" target="me.meegan.window.MenuBar">
-      <point x="84.54545454545462" y="-92.0" />
-      <point x="816.628787878788" y="1659.0" />
-      <point x="1085.0833333333335" y="1659.0" />
-      <point x="-137.0" y="158.5" />
+      <point x="1217.0833333333335" y="685.0" />
+      <point x="1178.0833333333335" y="685.0" />
+      <point x="-157.75" y="279.5" />
     </edge>
     <edge source="me.meegan.window.paint.PaintLine" target="me.meegan.window.paint.PaintObject">
       <point x="0.0" y="-103.5" />
-      <point x="909.0" y="81.0" />
-      <point x="989.6322150072151" y="81.0" />
-      <point x="-21.875" y="25.5" />
+      <point x="1789.8333333333335" y="81.0" />
+      <point x="1588.4264277389282" y="81.0" />
+      <point x="21.875" y="25.5" />
     </edge>
     <edge source="me.meegan.window.Window.WindowListener" target="me.meegan.window.Window">
-      <point x="63.5" y="25.5" />
-      <point x="933.0833333333334" y="1649.0" />
-      <point x="788.4469696969697" y="1649.0" />
-      <point x="56.363636363636374" y="-92.0" />
-    </edge>
-    <edge source="me.meegan.window.paint.PaintHandler" target="me.meegan.window.paint.PaintLine">
-      <point x="55.428571428571445" y="-158.5" />
-      <point x="761.7619047619048" y="895.0" />
-      <point x="909.0" y="895.0" />
-      <point x="0.0" y="103.5" />
+      <point x="64.5" y="25.5" />
+      <point x="1977.5" y="2229.0" />
+      <point x="1266.2272727272727" y="2229.0" />
+      <point x="122.72727272727275" y="-70.0" />
     </edge>
     <edge source="me.meegan.window.Window" target="me.meegan.window.paint.PaintHandler">
-      <point x="0.0" y="-92.0" />
-      <point x="732.0833333333334" y="1277.0" />
-      <point x="835.6666666666667" y="1277.0" />
-      <point x="129.33333333333337" y="158.5" />
+      <point x="-24.545454545454504" y="-70.0" />
+      <point x="1118.9545454545455" y="2229.0" />
+      <point x="1132.5" y="2229.0" />
+      <point x="1132.5" y="1634.0" />
+      <point x="1105.7996066433568" y="1634.0" />
+      <point x="-199.66666666666674" y="225.0" />
     </edge>
     <edge source="me.meegan.window.MenuBar" target="me.meegan.window.Window">
-      <point x="137.0" y="158.5" />
-      <point x="1359.0833333333335" y="1679.0" />
-      <point x="872.9924242424242" y="1679.0" />
-      <point x="140.90909090909088" y="-92.0" />
+      <point x="146.0" y="158.5" />
+      <point x="365.0" y="2209.0" />
+      <point x="1069.8636363636363" y="2209.0" />
+      <point x="-73.63636363636374" y="-70.0" />
     </edge>
     <edge source="me.meegan.window.paint.Pointer" target="me.meegan.window.paint.PaintHandler">
-      <point x="151.33333333333337" y="192.0" />
-      <point x="0.0" y="-158.5" />
+      <point x="151.33333333333348" y="192.0" />
+      <point x="1368.416666666667" y="1134.0" />
+      <point x="1342.9037733100236" y="1134.0" />
+      <point x="37.4375" y="-225.0" />
     </edge>
-    <edge source="me.meegan.window.console" target="me.meegan.window.StatusBar">
-      <point x="-30.0" y="-14.5" />
-      <point x="492.25" y="1277.0" />
-      <point x="467.5" y="1277.0" />
-      <point x="49.66666666666663" y="37.0" />
+    <edge source="me.meegan.window.Window" target="me.meegan.window.console.Console">
+      <point x="-49.09090909090901" y="-70.0" />
+      <point x="1094.409090909091" y="2199.0" />
+      <point x="645.5000000000002" y="2199.0" />
+      <point x="0.0" y="103.5" />
     </edge>
-    <edge source="me.meegan.window.Window" target="me.meegan.window.console">
-      <point x="-56.363636363636374" y="-92.0" />
-      <point x="675.719696969697" y="1649.0" />
-      <point x="567.25" y="1649.0" />
-      <point x="45.0" y="14.5" />
-    </edge>
-    <edge source="me.meegan.window.paint.PaintImage" target="me.meegan.window.paint.PaintObject">
-      <point x="0.0" y="-170.0" />
-      <point x="555.0" y="71.0" />
-      <point x="945.8822150072151" y="71.0" />
-      <point x="-65.625" y="25.5" />
-    </edge>
-    <edge source="me.meegan.window.Window" target="me.meegan.window.Window.WindowListener">
-      <point x="28.181818181818244" y="-92.0" />
-      <point x="760.2651515151516" y="1639.0" />
-      <point x="806.0833333333334" y="1639.0" />
-      <point x="-63.5" y="25.5" />
+    <edge source="me.meegan.window.console.Console" target="me.meegan.window.console.Console.listener">
+      <point x="0.0" y="-103.5" />
+      <point x="645.5000000000002" y="1634.0" />
+      <point x="658.2162733100236" y="1634.0" />
+      <point x="-52.25" y="25.5" />
     </edge>
     <edge source="me.meegan.window.paint.PaintHandler" target="me.meegan.window.paint.PaintCircle">
-      <point x="110.85714285714289" y="-158.5" />
-      <point x="817.1904761904763" y="905.0" />
-      <point x="1181.5" y="905.0" />
+      <point x="-187.1875" y="-225.0" />
+      <point x="1118.2787733100236" y="1124.0" />
+      <point x="866.3333333333334" y="1124.0" />
       <point x="0.0" y="103.5" />
     </edge>
     <edge source="me.meegan.window.paint.PaintHandler" target="me.meegan.window.paint.Pointer">
-      <point x="-110.85714285714278" y="-158.5" />
-      <point x="595.4761904761906" y="905.0" />
-      <point x="403.66666666666663" y="905.0" />
-      <point x="-151.33333333333337" y="192.0" />
-    </edge>
-    <edge source="me.meegan.window.console" target="me.meegan.window.console">
-      <point x="-45.0" y="14.5" />
-      <point x="477.25" y="1495.0" />
-      <point x="442.25" y="1495.0" />
-      <point x="442.25" y="1467.75" />
-      <point x="-60.0" y="7.25" />
+      <point x="-112.3125" y="-225.0" />
+      <point x="1193.1537733100236" y="1114.0" />
+      <point x="1065.75" y="1114.0" />
+      <point x="-151.33333333333326" y="192.0" />
     </edge>
     <edge source="me.meegan.window.paint.PaintHandler" target="me.meegan.window.paint.PaintObject">
-      <point x="166.28571428571433" y="-158.5" />
-      <point x="872.6190476190477" y="915.0" />
-      <point x="1326.0" y="915.0" />
-      <point x="1326.0" y="71.0" />
-      <point x="1077.132215007215" y="71.0" />
-      <point x="65.62500000000003" y="25.5" />
+      <point x="262.0625" y="-225.0" />
+      <point x="1567.5287733100236" y="1134.0" />
+      <point x="1918.8333333333335" y="1134.0" />
+      <point x="1918.8333333333335" y="71.0" />
+      <point x="1632.1764277389282" y="71.0" />
+      <point x="65.625" y="25.5" />
+    </edge>
+    <edge source="me.meegan.window.console.Console" target="me.meegan.window.console.CommandInterface">
+      <point x="150.0" y="-103.5" />
+      <point x="795.5000000000002" y="1634.0" />
+      <point x="872.7162733100236" y="1634.0" />
+      <point x="-37.75" y="14.5" />
+    </edge>
+    <edge source="me.meegan.window.paint.PaintHandler" target="me.meegan.window.paint.GraphicsPanel">
+      <point x="-262.0625" y="-225.0" />
+      <point x="1043.4037733100236" y="1134.0" />
+      <point x="711.8333333333334" y="1134.0" />
+      <point x="0.0" y="70.5" />
+    </edge>
+    <edge source="me.meegan.window.paint.PaintCircle" target="me.meegan.window.paint.PaintObject">
+      <point x="0.0" y="-103.5" />
+      <point x="866.3333333333334" y="71.0" />
+      <point x="1500.9264277389282" y="71.0" />
+      <point x="-65.625" y="25.5" />
+    </edge>
+    <edge source="me.meegan.window.console.Commands" target="me.meegan.window.console.CommandInterface">
+      <point x="-199.33333333333348" y="-257.5" />
+      <point x="1253.6666666666665" y="1624.0" />
+      <point x="948.2162733100236" y="1624.0" />
+      <point x="37.75" y="14.5" />
+    </edge>
+    <edge source="TurtleGraphics" target="me.meegan.window.Window">
+      <point x="0.0" y="-25.5" />
+      <point x="0.0" y="70.0" />
+    </edge>
+    <edge source="me.meegan.window.Window" target="me.meegan.window.MenuBar">
+      <point x="-122.72727272727275" y="-70.0" />
+      <point x="1020.7727272727273" y="2229.0" />
+      <point x="73.0" y="2229.0" />
+      <point x="-146.0" y="158.5" />
+    </edge>
+    <edge source="me.meegan.window.paint.PaintHandler" target="me.meegan.window.paint.PaintLine">
+      <point x="187.1875" y="-225.0" />
+      <point x="1492.6537733100236" y="1124.0" />
+      <point x="1789.8333333333335" y="1124.0" />
+      <point x="0.0" y="103.5" />
+    </edge>
+    <edge source="me.meegan.window.console.Console.ConsoleDocumentFilter" target="me.meegan.window.console.Console">
+      <point x="97.75" y="47.5" />
+      <point x="488.21627331002355" y="1624.0" />
+      <point x="570.5000000000002" y="1624.0" />
+      <point x="-75.0" y="-103.5" />
+    </edge>
+    <edge source="me.meegan.window.paint.PaintHandler" target="me.meegan.window.paint.PaintImage">
+      <point x="112.3125" y="-225.0" />
+      <point x="1417.7787733100236" y="1134.0" />
+      <point x="1454.5833333333335" y="1134.0" />
+      <point x="1454.5833333333335" y="685.0" />
+      <point x="1493.5833333333335" y="685.0" />
+      <point x="157.75" y="279.5" />
+    </edge>
+    <edge source="me.meegan.window.Window" target="me.meegan.window.console.Commands">
+      <point x="24.545454545454504" y="-70.0" />
+      <point x="1168.0454545454545" y="2189.0" />
+      <point x="1453.0" y="2189.0" />
+      <point x="0.0" y="257.5" />
+    </edge>
+    <edge source="me.meegan.window.console.Commands" target="me.meegan.window.paint.PaintHandler">
+      <point x="0.0" y="-257.5" />
+      <point x="1453.0" y="1634.0" />
+      <point x="1505.13293997669" y="1634.0" />
+      <point x="199.66666666666652" y="225.0" />
+    </edge>
+    <edge source="me.meegan.window.paint.PaintImage" target="me.meegan.window.paint.PaintObject">
+      <point x="0.0" y="-279.5" />
+      <point x="1335.8333333333335" y="81.0" />
+      <point x="1544.6764277389282" y="81.0" />
+      <point x="-21.875" y="25.5" />
+    </edge>
+    <edge source="me.meegan.window.console.Console.listener" target="me.meegan.window.console.Console">
+      <point x="52.25" y="25.5" />
+      <point x="762.7162733100236" y="1634.0" />
+      <point x="720.5000000000002" y="1634.0" />
+      <point x="75.0" y="-103.5" />
+    </edge>
+    <edge source="me.meegan.window.Window" target="me.meegan.window.Window.WindowListener">
+      <point x="98.18181818181824" y="-70.0" />
+      <point x="1241.6818181818182" y="2219.0" />
+      <point x="1848.5" y="2219.0" />
+      <point x="-64.5" y="25.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="888.0" y="1725.0" />
-  <SelectedNodes />
+  <settings layout="Hierarchic Group" zoom="0.2515479876160991" x="1361.0" y="1282.0" />
+  <SelectedNodes>
+    <node>com</node>
+  </SelectedNodes>
   <Categories>
     <Category>Fields</Category>
     <Category>Constructors</Category>

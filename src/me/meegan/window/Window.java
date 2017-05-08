@@ -9,7 +9,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class Window extends JFrame {
-    private static int numberOfWindows = 0;
+    private static int numberOfWindows = 0; // number of current windows open.
     PaintHandler painter = new PaintHandler();
     private MenuBar menuBar = new MenuBar();
     StatusBar statusBar = new StatusBar();
@@ -34,8 +34,7 @@ public class Window extends JFrame {
         pack();
         setVisible(true);
 
-
-        console.addCommands(new Commands(painter, statusBar));
+        console.addCommands(new Commands(painter, statusBar)); // sets the CommandInterface class to Commands
 
         addWindowListener(new WindowListener()); // listens for the closing event
     }

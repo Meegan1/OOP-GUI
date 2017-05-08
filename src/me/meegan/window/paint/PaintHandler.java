@@ -10,8 +10,11 @@ import java.io.*;
 import java.lang.reflect.Field;
 import java.util.LinkedList;
 
-public class PaintHandler extends GraphicsPanel implements Serializable {
-    public transient Pointer pointer = new Pointer(this);
+/**
+ * Extension of GraphicsPanel, controls and creates objects on the canvas.
+ */
+public class PaintHandler extends GraphicsPanel {
+    private Pointer pointer = new Pointer(this);
     private LinkedList<PaintObject> history = new LinkedList<>();
     private LinkedList<PaintObject> redo = new LinkedList<>();
     private boolean hasChanged;
@@ -22,6 +25,9 @@ public class PaintHandler extends GraphicsPanel implements Serializable {
         hasChanged = false; // sets initial value to false after rendering.
     }
 
+    /**
+     * Renders all objects to the graphics panel.
+     */
     void render() {
         clear();
         if(history != null)
@@ -33,13 +39,21 @@ public class PaintHandler extends GraphicsPanel implements Serializable {
         hasChanged = true; // has been changed after render's been called
     }
 
+    /**
+     * Creates a new canvas, resetting all objects.
+     */
     public void newPaint() {
         clear();
         pointer = new Pointer(this);
-        if(history != null) history.clear(); // clears lines list if not null
+        if(history != null) history.clear(); // clears history if not null
+        if(redo != null) redo.clear(); // clears redo list if not null
         render();
+        hasChanged = false;
     }
 
+    /**
+     * Undoes any change made to the canvas.
+     */
     public void undo() {
         if(history.isEmpty())
             return;
@@ -48,6 +62,9 @@ public class PaintHandler extends GraphicsPanel implements Serializable {
         render();
     }
 
+    /**
+     * Redoes any change made to the canvas.
+     */
     public void redo() {
         if(redo.isEmpty())
             return;
@@ -56,14 +73,38 @@ public class PaintHandler extends GraphicsPanel implements Serializable {
         render();
     }
 
+    /**
+     * Creates a line and adds it to the canvas.
+     *
+     * @param color - Color of the line.
+     * @param x1 - X1 co-ord.
+     * @param y1 - Y1 co-ord.
+     * @param x2 - X2 co-ord.
+     * @param y2 - Y2 co-ord.
+     */
     void createLine(Color color, int x1, int y1, int x2, int y2) {
         history.add(new PaintLine(color, x1, y1, x2, y2));
     }
 
+    /**
+     * Creates a circle on the canvas.
+     *
+     * @param color - Color of the circle.
+     * @param x - X co-ord.
+     * @param y - Y co-ord.
+     * @param r - Radius.
+     * @param fill - Filled: true or false.
+     */
     void createCircle(Color color, int x, int y, int r, boolean fill) {
         history.add(new PaintCircle(color, x, y, r, fill));
     }
 
+    /**
+     * Gets a color from a string.
+     *
+     * @param string - Name of color.
+     * @return Color.
+     */
     public static Color getColorFromString(String string) {
         Field field = null;
         Color color = null;
@@ -83,6 +124,12 @@ public class PaintHandler extends GraphicsPanel implements Serializable {
         return color;
     }
 
+    /**
+     * Saves the project/serialized class as a .paint file
+     *
+     * @param file - Save file.
+     * @throws IOException
+     */
     public void save(File file) throws IOException {
         FileOutputStream fos = new FileOutputStream(file);
         ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -92,21 +139,48 @@ public class PaintHandler extends GraphicsPanel implements Serializable {
         hasChanged = false;
     }
 
+    /**
+     * Exports the image as a png file, cropped to the current window size.
+     *
+     * @param file - Export image file.
+     * @throws IOException
+     */
     public void exportImage(File file) throws IOException {
         BufferedImage tmp = getImageWithoutCursor().getSubimage(0, 0, getBounds().width, getBounds().height);
         ImageIO.write(tmp, "png", file);
     }
 
+    /**
+     * Loads a .paint file into the window.
+     *
+     * @param file - .paint file.
+     * @throws IOException
+     * @throws ClassNotFoundException
+     */
     public void load(File file) throws IOException, ClassNotFoundException {
         FileInputStream fis = new FileInputStream(file);
         ObjectInputStream ois = new ObjectInputStream(fis);
         PaintHandler obj = (PaintHandler) ois.readObject();
         this.history = obj.history;
         this.redo = obj.redo;
-        render();
+        this.pointer = obj.pointer;
+        this.pointer.setPanel(this);
         fis.close();
         ois.close();
+        render();
+
         hasChanged = false;
+    }
+
+    /**
+     * Imports an image into the canvas.
+     *
+     * @param file - Any image file.
+     * @throws IOException
+     */
+    public void importImage(File file) throws IOException {
+        history.add(new PaintImage(file, 0, 0));
+        render();
     }
 
     // Prints the image
@@ -157,6 +231,9 @@ public class PaintHandler extends GraphicsPanel implements Serializable {
         }
     }
 
+    /**
+     * @return The canvas image without the cursor.
+     */
     private BufferedImage getImageWithoutCursor() {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         BufferedImage image = new BufferedImage((int) screenSize.getWidth(), (int) screenSize.getHeight(), BufferedImage.TYPE_INT_RGB); // set resolution as screen resolution
@@ -169,6 +246,10 @@ public class PaintHandler extends GraphicsPanel implements Serializable {
             for(PaintObject line : history)
                 line.draw(image.getGraphics());
         return image;
+    }
+
+    public Pointer getPointer() {
+        return pointer;
     }
 
     public boolean hasChanged() {

@@ -6,36 +6,65 @@ import java.awt.geom.AffineTransform;
 import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
 import java.awt.image.WritableRaster;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 
-public class PaintImage implements PaintObject {
-    private BufferedImage img;
+public class PaintImage implements PaintObject, Serializable {
+    private transient BufferedImage img;
     private int x, y,  rotation, width, height;
     private Color color;
 
-
+    /**
+     * Creates the image from an InputStream.
+     *
+     * @param file - Resource file.
+     * @param x - X co-ord.
+     * @param y - Y co-ord.
+     * @param width - Width.
+     * @param height - Height.
+     */
     public PaintImage(InputStream file, int x, int y, int width, int height) {
+        try {
+            initialize(file, x, y, width, height);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Creates the image from a File. With either default width and height or set by params.
+     *
+     * @param file - File.
+     * @param x - X co-ord.
+     * @param y - Y co-ord.
+     * @throws IOException
+     */
+    public PaintImage(File file, int x, int y) throws IOException { this(file, x, y, 0, 0); }
+    public PaintImage(File file, int x, int y, int width, int height) throws IOException {
         initialize(file, x, y, width, height);
     }
 
-    public PaintImage(File file, int x, int y, int width, int height) {
-        initialize(file, x, y, width, height);
-    }
-
-    private void initialize(Object file, int x, int y, int width, int height) {
+    /**
+     * Creates the image from an InputStream or File and resizes if a width and height is given.
+     *
+     * @param file - InputStream or File.
+     * @param x - X co-ord.
+     * @param y - Y co-ord.
+     * @param width - Width.
+     * @param height - Height.
+     * @throws IOException
+     */
+    private void initialize(Object file, int x, int y, int width, int height) throws IOException {
         img = null;
         this.x = x;
         this.y = y;
-        try {
-            if(file instanceof InputStream)
-                img = ImageIO.read((InputStream) file);
-            else if(file instanceof File)
-                img = ImageIO.read((File) file);
-        } catch (IOException ignored) {
-        }
-        resize(width, height);
+
+        if(file instanceof InputStream)
+            img = ImageIO.read((InputStream) file);
+        else if(file instanceof File)
+            img = ImageIO.read((File) file);
+
+        if(width != 0 && height != 0) // if no width and height given, use normal size as (0, 0) would be invisible
+            resize(width, height);
     }
 
     public void draw(Graphics g) {
@@ -43,6 +72,12 @@ public class PaintImage implements PaintObject {
     }
 
 
+    /**
+     * Resizes the current image to the given parameters.
+     *
+     * @param width - Width of the new size.
+     * @param height - Height of the new size.
+     */
     private void resize(int width, int height) {
         this.width = width;
         this.height = height;
@@ -57,7 +92,12 @@ public class PaintImage implements PaintObject {
         img = tmpBuffer;
     }
 
-    @SuppressWarnings("unused")
+    /**
+     * Moves the image to the given parameters.
+     *
+     * @param x - X co-ord.
+     * @param y - Y co-ord.
+     */
     void move(int x, int y) {
         this.x = x;
         this.y = y;
@@ -71,6 +111,12 @@ public class PaintImage implements PaintObject {
         img = op.filter(img, null);
     }
 
+    /**
+     * Changes all pixels in the image to the given color (excluding transparent pixels).
+     * Used for the pointer.
+     *
+     * @param color - Image color.
+     */
     void setColor(Color color) {
         WritableRaster raster = img.getRaster();
         for (int xx = 0; xx < getWidth()-1; xx++) {
@@ -106,4 +152,22 @@ public class PaintImage implements PaintObject {
     }
 
     Color getColor() { return color; }
+
+    // ============= Serialization ================
+
+    /**
+     * Allows the image to be serialized.
+     */
+    private void writeObject(ObjectOutputStream out) throws IOException {
+        out.defaultWriteObject();
+        ImageIO.write(img, "png", out);
+    }
+
+    /**
+     * Used for reading the serialized image.
+     */
+    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
+        in.defaultReadObject();
+        img = ImageIO.read(in);
+    }
 }

@@ -42,14 +42,6 @@ class GraphicsPanel extends JPanel {
 		g.drawImage(image, 0, 0, null);
 	}
 
-/*	public void resizePanel() {
-		Image tmp = Toolkit.getDefaultToolkit().createImage(image.getSource());
-
-		image = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_RGB);
-		clear();
-		image.getGraphics().draw(tmp, 0, 0, null);
-		this.repaint();
-	}*/
 	/**
 	 * Constructor.
 	 */

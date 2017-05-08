@@ -8,6 +8,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+/**
+ * All commands are listed in here. Console uses reflection to execute the functions.
+ * Methods can print a message via returning a string.
+ */
 @SuppressWarnings("unused")
 public class Commands implements CommandInterface {
     private PaintHandler painter;
@@ -18,51 +22,51 @@ public class Commands implements CommandInterface {
     }
 
     public void forward(int distance) {
-        painter.pointer.forward(distance);
+        painter.getPointer().forward(distance);
     }
 
     public void backward(int distance) {
-        painter.pointer.backward(distance);
+        painter.getPointer().backward(distance);
     }
 
     public String color(String string) {
         Color color = PaintHandler.getColorFromString(string);
         if(color == null)
             return "ERROR: color does not exist."; // print error
-        painter.pointer.setColor(color);
+        painter.getPointer().setColor(color);
         return null; // success
     }
 
     public void black() {
-        painter.pointer.setColor(Color.black);
+        painter.getPointer().setColor(Color.black);
     }
 
     public void green() {
-        painter.pointer.setColor(Color.green);
+        painter.getPointer().setColor(Color.green);
     }
 
     public void red() {
-        painter.pointer.setColor(Color.red);
+        painter.getPointer().setColor(Color.red);
     }
 
     public void turnLeft() {
-        painter.pointer.turnLeft();
+        painter.getPointer().turnLeft();
     }
 
     public void turnRight() {
-        painter.pointer.turnRight();
+        painter.getPointer().turnRight();
     }
 
     public void penUp() {
-        painter.pointer.penUp();
+        painter.getPointer().penUp();
     }
 
     public void penDown() {
-        painter.pointer.penDown();
+        painter.getPointer().penDown();
     }
 
     public void toggle() {
-        painter.pointer.toggleDown();
+        painter.getPointer().toggleDown();
     }
 
     public void undo() {
@@ -78,11 +82,11 @@ public class Commands implements CommandInterface {
     }
 
     public void circle(int r) {
-        painter.pointer.createCircle(r);
+        painter.getPointer().createCircle(r);
     }
 
     public void filledCircle(int r) {
-        painter.pointer.createCircle(r, true);
+        painter.getPointer().createCircle(r, true);
     }
 
     public void save(String filename) {
